@@ -8,4 +8,20 @@ for fruit in y:
     else:
         z[fruit] = x[fruit]
         z[fruit] += 1
-print(z)
+#print(z)
+xx = "I ATE AN APPLE THIS MORNING!  YOOOOOOOOOOOO"
+yy = xx.lower()
+zz = {}
+for character in yy:
+    if character not in zz and character.isalpha() == True:
+        zz[character] = 1
+    elif character.isalpha() == False:
+        pass
+    else:
+        zz[character] += 1
+
+w = []
+for i in zz:
+    w.append((i, zz[i]))
+sorted_list = sorted(w, key=lambda v: v[1], reverse=True)
+print(sorted_list)
